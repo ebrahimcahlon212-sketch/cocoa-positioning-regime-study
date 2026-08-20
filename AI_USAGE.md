@@ -30,8 +30,9 @@ AI accelerated the research workflow; it did not supply the evidence.
 
 Those operations are implemented in Python or workbook formulas. ICCO balance, regional-grinding
 and scientific-registry rows are human-reviewed factual transcriptions, not model-generated
-observations. Tests and the clean-tree CI check fail when derived data, headline assertions,
-timing rules or deterministic report outputs diverge.
+observations. Tests fail when derived data, headline assertions, timing rules, required report text
+or links diverge. Report bytes are deterministic across repeated builds in the same environment;
+they are not claimed to be byte-identical across operating systems and font stacks.
 
 ## Human controls
 
