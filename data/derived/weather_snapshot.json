@@ -1,0 +1,85 @@
+{
+  "as_of_utc": "2026-08-20T12:56:59Z",
+  "coverage": {
+    "first_period": "2026-01",
+    "last_period": "2026-08",
+    "observation_count": 16,
+    "site_count": 2
+  },
+  "data_status": "provisional_location_proxy",
+  "limitations": [
+    "Two NASA POWER grid cells are location proxies, not cocoa-area-weighted farm observations.",
+    "NASA POWER meteorology is model/assimilation output at roughly 0.5 x 0.625 degree native resolution.",
+    "Near-real-time values can be replaced by improved climate-quality data after two to three months.",
+    "The retained snapshot was first observed at retrieval time; it is not a historical release-vintage archive.",
+    "Kumasi's June extreme model-grid accumulation requires confirmation against a second dataset before weather-signal use.",
+    "No weather anomaly is converted mechanically into cocoa tonnes, price direction, or a trading signal."
+  ],
+  "quality_gate": "SECOND_SOURCE_REQUIRED",
+  "thresholds": {
+    "dry_day": "daily precipitation < 1.0 mm",
+    "heavy_rain_day": "daily precipitation >= 20.0 mm",
+    "state_labels": "descriptive comparison bands, not crop-damage thresholds"
+  },
+  "trailing_three_reported_months_or_partial_month": [
+    {
+      "available_at_utc": "2026-08-20T12:56:58Z",
+      "climatology_precip_mm": 404.11,
+      "country": "Cote d'Ivoire",
+      "days_observed": 75,
+      "dry_days_lt_1mm": 5,
+      "heavy_rain_days_ge_20mm": 6,
+      "max_within_month_dry_spell_days": 1,
+      "mean_t2m_c": 24.99,
+      "observed_precip_mm": 593.99,
+      "precip_anomaly_pct": 46.99,
+      "precipitation_state": "wetter_than_2001_2020_monthly_baseline",
+      "quality_flag": "provisional_nrt_mixed_sources",
+      "quality_flags": [
+        "provisional_nrt_mixed_sources"
+      ],
+      "quality_notes": [
+        "Daily values aggregated deterministically; current snapshot is not a release-vintage archive",
+        "Partial month through 14 August; daily values aggregated deterministically"
+      ],
+      "requires_secondary_confirmation": false,
+      "site_id": "daloa_ci_proxy",
+      "site_name": "Daloa cocoa-belt proxy",
+      "source_sha256": "9028c307ebccaaa64db3150ba3f6eddadeafd956b7a71602487a6f1e023c410c",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR,T2M,T2M_MAX,RH2M&community=AG&longitude=-6.45&latitude=6.877&start=20260101&end=20260814&format=JSON",
+      "t2m_anomaly_c": 0.08,
+      "window_end": "2026-08-14",
+      "window_start": "2026-06-01"
+    },
+    {
+      "available_at_utc": "2026-08-20T12:56:59Z",
+      "climatology_precip_mm": 399.16,
+      "country": "Ghana",
+      "days_observed": 75,
+      "dry_days_lt_1mm": 6,
+      "heavy_rain_days_ge_20mm": 11,
+      "max_within_month_dry_spell_days": 1,
+      "mean_t2m_c": 24.74,
+      "observed_precip_mm": 1149.52,
+      "precip_anomaly_pct": 187.98,
+      "precipitation_state": "much_wetter_than_2001_2020_monthly_baseline",
+      "quality_flag": "provisional_nrt_mixed_sources",
+      "quality_flags": [
+        "provisional_nrt_mixed_sources"
+      ],
+      "quality_notes": [
+        "Daily values aggregated deterministically; current snapshot is not a release-vintage archive",
+        "Large provisional accumulation includes multiple extreme model-grid values and must be confirmed against a second dataset before use",
+        "Partial month through 14 August; daily values aggregated deterministically"
+      ],
+      "requires_secondary_confirmation": true,
+      "site_id": "kumasi_gh_proxy",
+      "site_name": "Kumasi cocoa-belt proxy",
+      "source_sha256": "18158ca0aa4a085f02b99189578934ea64d941ae4130f83c7891f745278e9062",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR,T2M,T2M_MAX,RH2M&community=AG&longitude=-1.624&latitude=6.688&start=20260101&end=20260814&format=JSON",
+      "t2m_anomaly_c": 0.22,
+      "window_end": "2026-08-14",
+      "window_start": "2026-06-01"
+    }
+  ]
+}

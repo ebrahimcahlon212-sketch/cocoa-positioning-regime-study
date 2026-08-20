@@ -1,0 +1,161 @@
+{
+  "as_of_utc": "2026-08-20T12:57:05Z",
+  "record_count": 4,
+  "records": [
+    {
+      "authors": "Lauranne Gateau-Rey; Edmund V. J. Tanner; Bruno Rapidel; Jean-Philippe Marelli; Stefan Royaert",
+      "citation_short": "Gateau-Rey et al. 2018",
+      "doi": "10.1371/journal.pone.0200454",
+      "evidence_grade": "natural_experiment",
+      "evidence_id": "gateau_rey_2018",
+      "exposure": "Severe 2015-16 ENSO drought",
+      "external_validity_limits": "Single Brazilian municipality near cocoa climatic limits; no untreated contemporaneous control; do not transfer the magnitude to West Africa",
+      "geography": "Barro Preto, Bahia, Brazil",
+      "journal": "PLOS ONE",
+      "lag": "Loss persisted into the following harvest",
+      "mechanism_use": "Supports severe-drought tail-risk mechanism but not a West Africa effect size",
+      "open_access_license": "CC BY 4.0",
+      "publication_date": "2018-07-10",
+      "reported_result": "Potential main-harvest yield fell 89% and productive-tree mortality was 15%; the authors stress the event and location were exceptional",
+      "retrieved_at_utc": "2026-08-20T12:57:05Z",
+      "sample_or_data": "31 randomly selected farms with permanent transects",
+      "signal_keys": [
+        "drought",
+        "tree_mortality",
+        "yield_lag"
+      ],
+      "source_sha256": "982b6f133948473f8e1624250bab613bf321f2670eeb4d4b8c49c0734cddc59d",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0200454",
+      "study_type": "Before-and-after natural drought study",
+      "title": "Climate change could threaten cocoa production: Effects of 2015-16 El Nino-related drought on cocoa agroforests in Bahia Brazil"
+    },
+    {
+      "authors": "Bismark Kwesi Asitoakor; Richard Asare; Anders Raebild; Hans Peter Ravn; Vincent Yao Eziah; Kwadwo Owusu; Eric Opoku Mensah; Philippe Vaast",
+      "citation_short": "Asitoakor et al. 2022",
+      "doi": "10.1016/j.agrformet.2022.109199",
+      "evidence_grade": "observational_gradient",
+      "evidence_id": "asitoakor_2022",
+      "exposure": "Rainfall temperature humidity shade and management across three zones",
+      "external_validity_limits": "Only three communities and 23 farms; climate and management vary together; association is not a causal tonne response",
+      "geography": "Ghana cocoa belt climate gradient",
+      "journal": "Agricultural and Forest Meteorology",
+      "lag": "Annual and multi-year comparisons",
+      "mechanism_use": "Supports dual rainfall mechanism: moisture can aid health while wetter conditions raise black-pod pressure; management is a confounder",
+      "open_access_license": "CC BY 4.0",
+      "publication_date": "2022-12-15",
+      "reported_result": "The wet south had the highest mean dry-bean yield and black-pod incidence; within-site weather variation did not significantly explain yield and management remained important",
+      "retrieved_at_utc": "2026-08-20T12:57:03Z",
+      "sample_or_data": "23 farms and 460 monitored cocoa trees from 2016 through 2019",
+      "signal_keys": [
+        "rainfall",
+        "humidity",
+        "black_pod",
+        "management"
+      ],
+      "source_sha256": "cc5629effa5f51947d55657f08b3e56119da688741dea648eac661ac3edd2909",
+      "source_url": "https://cocoasoils.org/wp-content/uploads/2022/10/Asitoakor-et-al.-2022..pdf",
+      "study_type": "Four-year observational farm gradient",
+      "title": "Influences of climate variability on cocoa health and productivity in agroforestry systems in Ghana"
+    },
+    {
+      "authors": "Esteban A. Montero-Sanchez; Danae M. A. Rozendaal; Ambra Tosto; Niels P. R. Anten; Pieter A. Zuidema",
+      "citation_short": "Montero-Sanchez et al. 2025",
+      "doi": "10.1017/S001447972510015X",
+      "evidence_grade": "observational_panel",
+      "evidence_id": "montero_sanchez_2025",
+      "exposure": "Monthly NASA POWER precipitation and temperature plus within-tree competition",
+      "external_validity_limits": "Gridded monthly weather and observational associations; farm management disease and tree competition remain relevant; pod counts are not traded tonnes",
+      "geography": "Ghana",
+      "journal": "Experimental Agriculture",
+      "lag": "One to five months by pod class; black-pod association used a four-month climate lag",
+      "mechanism_use": "Supports crop-stage lags and non-monotonic rainfall interpretation; does not establish a market signal",
+      "open_access_license": "CC BY 4.0",
+      "publication_date": "2025-08-29",
+      "reported_result": "Climate at fruit set best explained pod counts; higher temperature and precipitation reduced most pod classes and higher precipitation was associated with more black pod",
+      "retrieved_at_utc": "2026-08-20T12:57:04Z",
+      "sample_or_data": "1472 trees on 96 farms with pod counts about every six weeks",
+      "signal_keys": [
+        "rainfall",
+        "temperature",
+        "fruit_set_lag",
+        "black_pod"
+      ],
+      "source_sha256": "669776ec07d88c9273ccb60db2ccead6876944586ff04aca7ba825c439a194c3",
+      "source_url": "https://www.cambridge.org/core/journals/experimental-agriculture/article/effects-of-climate-and-withintree-competition-on-cocoa-pod-production-in-ghana/2F9415457E7C6E28FC01F050F4A7049D",
+      "study_type": "Three-year repeated-observation farm panel",
+      "title": "Effects of climate and within-tree competition on cocoa pod production in Ghana"
+    },
+    {
+      "authors": "Salomon Obahoundje; Seifu A. Tilahun; Petra Schmitter",
+      "citation_short": "Obahoundje et al. 2026",
+      "doi": "10.1371/journal.pclm.0000970",
+      "evidence_grade": "model_projection",
+      "evidence_id": "obahoundje_2026",
+      "exposure": "Drought excess-rainfall precipitation and temperature indices",
+      "external_validity_limits": "Projection and model uncertainty; not a current crop forecast or causal estimate; regional yield outputs cannot be mapped directly into a trade",
+      "geography": "Ghana and Cote d'Ivoire",
+      "journal": "PLOS Climate",
+      "lag": "Near future 2026-2055 and far future 2056-2085 relative to 1985-2014",
+      "mechanism_use": "Supports regional rather than country-wide weather indicators and explicit drought/excess-rain cases",
+      "open_access_license": "CC BY 4.0",
+      "publication_date": "2026-07-01",
+      "reported_result": "Projected yield effects varied materially by region and scenario; severe drought cases were more damaging in vulnerable regions",
+      "retrieved_at_utc": "2026-08-20T12:57:05Z",
+      "sample_or_data": "CHIRPS 1981-2024 plus 12 global climate models and regional yield modelling",
+      "signal_keys": [
+        "drought",
+        "excess_rain",
+        "regional_heterogeneity"
+      ],
+      "source_sha256": "d24bd6633c79647abaf0c07459997d8201951b96ca76c9efc72ace4c0d276684",
+      "source_url": "https://journals.plos.org/climate/article?id=10.1371%2Fjournal.pclm.0000970",
+      "study_type": "Climate-model projection with machine-learning yield model",
+      "title": "Climate-yield interactions in West Africa: Machine learning insights for cocoa production in Ghana and Cote d'Ivoire"
+    }
+  ],
+  "signal_index": {
+    "black_pod": [
+      "asitoakor_2022",
+      "montero_sanchez_2025"
+    ],
+    "drought": [
+      "gateau_rey_2018",
+      "obahoundje_2026"
+    ],
+    "excess_rain": [
+      "obahoundje_2026"
+    ],
+    "fruit_set_lag": [
+      "montero_sanchez_2025"
+    ],
+    "humidity": [
+      "asitoakor_2022"
+    ],
+    "management": [
+      "asitoakor_2022"
+    ],
+    "rainfall": [
+      "asitoakor_2022",
+      "montero_sanchez_2025"
+    ],
+    "regional_heterogeneity": [
+      "obahoundje_2026"
+    ],
+    "temperature": [
+      "montero_sanchez_2025"
+    ],
+    "tree_mortality": [
+      "gateau_rey_2018"
+    ],
+    "yield_lag": [
+      "gateau_rey_2018"
+    ]
+  },
+  "translation_guardrails": [
+    "Treat rainfall as non-monotonic: drought can damage cocoa, while excess rain and humidity can raise fungal-disease pressure.",
+    "Apply crop-stage and lag logic; Ghana pod observations found strongest climate associations at fruit set with one-to-five-month lags by pod class.",
+    "Do not transfer the magnitude of an extreme Bahia drought loss directly to Ghana or Cote d'Ivoire.",
+    "Do not convert a grid-cell weather anomaly to production tonnes without crop-area weights, phenology, farm management, disease, and validated yield response.",
+    "Observational and model-projection studies provide mechanism priors, not proof that a weather reading caused a market move or predicts returns."
+  ]
+}

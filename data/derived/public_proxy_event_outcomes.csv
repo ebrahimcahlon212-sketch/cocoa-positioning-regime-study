@@ -1,0 +1,14 @@
+response_id,signal_report_date,signal_available_at_utc,event_period,entry_period,exit_period,status,entry_price_usd_per_kg,exit_price_usd_per_kg,response_return,censor_reason
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2017-02-21,2017-02-24T20:30:00Z,2017-02,2017-03,2017-06,COMPLETE,2.06,2.00,-0.0291262135922330097087378641,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2017-05-30,2017-06-02T19:30:00Z,2017-06,2017-07,2017-10,COMPLETE,1.99,2.10,0.055276381909547738693467337,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2017-08-29,2017-09-01T19:30:00Z,2017-09,2017-10,2018-01,COMPLETE,2.10,1.95,-0.0714285714285714285714285714,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2018-01-02,2018-01-05T20:30:00Z,2018-01,2018-02,2018-05,COMPLETE,2.12,2.66,0.254716981132075471698113208,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2018-10-16,2018-10-19T19:30:00Z,2018-10,2018-11,2019-02,COMPLETE,2.19,2.26,0.031963470319634703196347032,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2019-04-02,2019-04-05T19:30:00Z,2019-04,2019-05,2019-08,COMPLETE,2.32,2.19,-0.0560344827586206896551724138,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2019-09-10,2019-09-13T19:30:00Z,2019-09,2019-10,2020-01,COMPLETE,2.44,2.60,0.065573770491803278688524590,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2020-07-21,2020-07-24T19:30:00Z,2020-07,2020-08,2020-11,COMPLETE,2.35,2.36,0.004255319148936170212765957,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2021-12-14,2021-12-17T20:30:00Z,2021-12,2022-01,2022-04,COMPLETE,2.47,2.46,-0.0040485829959514170040485830,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2022-07-12,2022-07-15T19:30:00Z,2022-07,2022-08,2022-11,COMPLETE,2.32,2.41,0.038793103448275862068965517,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2022-10-11,2022-10-14T19:30:00Z,2022-10,2022-11,2023-02,COMPLETE,2.41,2.65,0.099585062240663900414937759,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2025-12-09,2025-12-19T20:30:00Z,2025-12,2026-01,2026-04,COMPLETE,4.97,3.40,-0.3158953722334004024144869215,
+world_bank_monthly_proxy_m_plus_1_to_m_plus_4,2026-06-16,2026-06-22T19:30:00Z,2026-06,2026-07,2026-10,CENSORED,5.61,,,exit period is after the declared last complete month

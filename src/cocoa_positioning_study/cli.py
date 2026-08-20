@@ -5,7 +5,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from cocoa_positioning_study.evidence import materialize_evidence
+from cocoa_positioning_study.fundamentals import materialize_fundamentals
 from cocoa_positioning_study.pipeline import materialize
+from cocoa_positioning_study.trading_case_pipeline import materialize_trading_case
+from cocoa_positioning_study.weather import materialize_weather
 
 
 def main() -> int:
@@ -18,6 +22,11 @@ def main() -> int:
         help="repository root",
     )
     args = parser.parse_args()
-    materialize(args.root.resolve(), check=args.check)
+    root = args.root.resolve()
+    materialize(root, check=args.check)
+    materialize_fundamentals(root, check=args.check)
+    materialize_weather(root, check=args.check)
+    materialize_evidence(root, check=args.check)
+    materialize_trading_case(root, check=args.check)
     print("derived outputs are current" if args.check else "derived outputs rebuilt")
     return 0

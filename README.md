@@ -1,114 +1,130 @@
-# Cocoa Positioning Regime Shift
+# Cocoa Trading Research Case
 
-**From the 2024 positioning extreme to the 2026 rebuild**
+**Positioning, the physical balance, regional demand, weather and a defined-risk expression**
 
-A point-in-time study of cocoa futures positioning and participation using official CFTC
-Commitments of Traders data, with a four-value World Bank cocoa extract for recent price context.
+This public project asks a trading question without manufacturing a trading result: after cocoa
+positioning moved from an extreme long to net short, did the physical, weather and historical
+return evidence justify a bullish reversal trade?
 
-**[Open the one-page research note](output/pdf/cocoa-positioning-regime-shift.pdf)**
+- **[Open the two-page trading memo](output/pdf/cocoa-trading-research-case.pdf)**
+- **[Open the scenario workbook](outputs/cocoa-trading-v2/cocoa-trade-scenario.xlsx)**
+- [Original one-page positioning note](output/pdf/cocoa-positioning-regime-shift.pdf)
 
-The result is a change in market structure, not a backtested trading claim. Managed-money net
-positioning moved from a peak of **+82,572 contracts** on January 23, 2024 to **-23,084** on
-June 9, 2026. It then recovered to **-6,667** by August 11, 2026. July's World Bank cocoa
-indicator was **$5.61/kg**, 42.6% above the Q1 2026 average, and coincided with part of that
-positioning recovery.
+The answer is deliberately mixed. The physical recovery is real but not comfortable, demand is
+regionally divergent, and managed-money remained net short. Provisional West African location
+proxies lean wet, but Kumasi's extreme accumulation needs a second-source check and is excluded
+from the trade gate. The frozen retrospective public-proxy study is **inconclusive**: 12 completed events
+produced a mean three-month response of **+0.6%**, a **58.3%** positive rate and a wide **-5.6% to
++5.8%** block-bootstrap interval. That is not evidence of alpha.
 
-The word "coincided" is deliberate: weekly positions and a monthly price indicator do not
-establish causality, crowding or alpha.
+## Decision view as of 20 August 2026
 
-## What changed
+| Layer | Point-in-time observation | Trading interpretation boundary |
+|---|---|---|
+| Positioning | Managed-money net was -6,667 contracts on 11 August, after a June trough of -23,084 | A short base can amplify an upside event, but COT categories do not reveal motive or contract month |
+| Physical balance | ICCO's May vintage put 2024/25 production at 4,723kt, grindings at 4,628kt, published surplus at 48kt, ending stocks at 1,320kt and stocks/grindings at 28.5% | Supply recovery, but the latest revision reduced the published surplus and stocks by 27kt |
+| Regional demand | Q2 2026 grind releases: Europe -4.6% y/y, Asia +25.07%, North America +7.65% | Demand is divergent; comparator and methodology caveats are retained |
+| Weather | Daloa was +47.0%; the Kumasi-driven upper reading of +188.0% is flagged for second-source confirmation | Provisional location proxies, not crop-area weights or a yield forecast; weather is not currently trade-gate eligible |
+| Historical test | 13 events; 12 complete; mean +0.6%; median +1.8%; hit rate 58.3%; 95% CI -5.6% to +5.8% | Monthly World Bank data are a non-tradable response proxy and the result is underpowered/inconclusive |
 
-| Observation | Verified result | Interpretation boundary |
-|---|---:|---|
-| Managed-money peak to trough | -105,656 contracts | A positioning regime change, not physical inventory |
-| June trough to August 11 | +16,417 contracts | Consistent with partial covering and/or re-risking; the data cannot separate them |
-| Open-interest peak to trough | -74.0% | Participation contracted materially; this is not a liquidity-cost estimate |
-| Latest open interest vs 2024 peak | -42.8% | Participation rebuilt, but remained below the earlier extreme |
-| July price vs Q1 2026 average | +42.6% | Retrospective context, not a tradeable futures return |
+The conditional upside case is therefore an **event-risk watch**, not a buy signal. The exact
+version-1 physical gate is currently true because the latest ICCO revision reduced the published
+surplus and ending stocks by 27kt and stocks/grindings by 0.7pp. That state expires after 120 days
+or a newer vintage. Weather is context-only and cannot activate version 1. A new positioning reversal and licensed
+contract-price confirmation are still required. Weaker grindings, a wider official surplus,
+improving crop conditions or renewed short formation invalidate the thesis.
 
-## Market view
+## Hypothetical expression
 
-The 2024 extreme-long regime had reversed into a net-short regime by 2026. The rebound from
-June's short extreme, alongside July's price recovery, suggests the one-way normalization
-story became less comfortable. Physical normalization remains uncertain because neither CFTC
-positions nor the World Bank price indicator directly measures the cocoa balance sheet.
+The frozen research rule uses a defined-risk **Dec-26 cocoa call spread** because a weather or crop
+disappointment is asymmetric while the premium caps loss. Actual evaluation requires licensed ICE
+settlement history and option-chain inputs stored outside Git. Neither is present. The public report
+uses conspicuously illustrative—not market—inputs only to make the mechanics auditable:
 
-This creates a **conditional upside event-risk watch** if crop recovery disappoints while net
-positioning remains short and price confirms. The downside case is weaker demand or grindings,
-a larger surplus and renewed short formation. This is a falsifiable research posture, not a
-price forecast or trade recommendation.
+- long 5,500 / short 6,350 call;
+- 300 USD/t net debit plus 20 USD round-trip fees per spread;
+- maximum loss **$3,020**, maximum gain **$5,480**, breakeven **$5,802/t**;
+- one spread for a $1m paper portfolio under a 0.5% maximum-loss budget; and
+- earliest exit at 40 sessions, normalized positioning at or above zero, fresh-short invalidation,
+  or ten sessions before the option's last trading day.
 
-## The point-in-time control
+These are scenario assumptions, not observed quotes, a recommendation or executable P&L. Missing
+licensed inputs produce **NOT EVALUATED**, never guessed prices.
 
-COT observations describe positions as of Tuesday and are generally published on Friday at
-15:30 Eastern Time. The pipeline stores those as separate effective and available timestamps.
-A historical query can use a row only after its publication time; treating Tuesday's positions
-as known on Tuesday would leak future information.
+## What makes the test point-in-time
 
-The failure mode is real, not theoretical: positions dated September 30, 2025 were not actually
-published until November 19 during the CFTC shutdown backlog. The pipeline uses the documented
-catch-up schedule instead of assigning a normal Friday release.
+CFTC positions are effective on Tuesday but normally become usable on Friday at 15:30 Eastern.
+The pipeline sorts and applies its 91-day cooldown using the actual or explicitly modelled
+publication timestamp—not the report date. This matters around daylight-saving changes and during
+exceptional schedules: the 30 September 2025 report was unavailable until the shutdown catch-up on
+19 November.
 
-Ordinary 2024 and uncovered 2025 publication dates are explicitly rule-modelled where a complete
-official schedule was not established. These are research controls, not latency-grade timestamps.
+The event threshold is an expanding, prior-only tenth percentile with at least 156 earlier releases.
+The response uses World Bank month `m+1` to `m+4`; missing future endpoints stay censored. Because
+the rule was designed after historical data existed, every result through 20 August 2026 is labelled
+retrospective/pseudo-out-of-sample. The registered forward holdout starts after that date.
 
-Price context is deliberately minimal: only January, February, March and July 2026 values are
-retained. They are used retrospectively because this project does not possess a complete archive
-of historical publication vintages. The full upstream workbook and source pages are not
-redistributed; official URLs and upstream hashes are retained in the source manifest.
+## How scientific studies are used
 
-The annual CFTC files are the snapshots retrieved for this study and can contain later CFTC
-corrections or reclassifications. Their hashes bind the calculation to exact bytes, but this is
-publication-time leakage control rather than full historical value-vintage replay.
+The evidence registry records mechanism, geography, design and external-validity limits for four
+primary studies. The papers justify candidate features—dry spells, heat, wetness/disease pressure
+and fruit-set lags. They do **not** provide a transferable cocoa-price coefficient. Only a separately
+registered point-in-time test can decide whether a feature has market relevance.
 
 ## What this demonstrates
 
-- commodity positioning and participation analysis;
-- point-in-time controls for an easily missed COT publication lag;
-- deterministic calculations with preserved sources, hashes and units;
-- a market view with explicit confirmation, invalidation and asymmetric event risks; and
-- AI-assisted research without model-generated facts, arithmetic or trading actions.
+- a full commodity-research chain from official source to falsifiable trade expression;
+- release-time controls that prevent a subtle COT look-ahead error;
+- physical-balance and regional-demand reasoning with vintages and source hashes;
+- provisional weather monitoring with explicit spatial and scientific limitations;
+- a frozen retrospective test that reports a null/uncertain result honestly;
+- exact call-spread payoff, bounded-loss sizing and scenario analysis; and
+- AI-assisted source discovery and adversarial review, with deterministic Python producing every
+  reported number.
 
 ## Repository map
 
-- `output/pdf/cocoa-positioning-regime-shift.pdf` - one-page recruiter-facing note
-- `output/figures/` - deterministic charts used in the note
-- `data/source_manifest.csv` - official URLs, retrieval UTC, upstream hashes, extraction methods
-  and public-extract fingerprints
-- `data/derived/` - auditable analytical outputs, including the four-value price extract
-- `src/` - deterministic parsing, temporal controls and calculations
-- `tests/` - offline tests for source integrity, units and look-ahead prevention
+- `output/pdf/cocoa-trading-research-case.pdf` - two-page recruiter-facing trading memo
+- `outputs/cocoa-trading-v2/cocoa-trade-scenario.xlsx` - formula-driven scenario workbook
+- `data/derived/trading_case_summary.json` - the report's primary narrative summary
+- `data/derived/cocoa_cot_positioning.csv` and `cocoa_price_monthly.csv` - chart-series inputs
+- `data/derived/cftc_positioning_reversal_events.csv` - point-in-time signal events
+- `data/derived/public_proxy_event_outcomes.csv` - complete and censored proxy outcomes
+- `data/derived/fundamentals_snapshot.json` - physical balance and grind-release vintages
+- `data/derived/weather_snapshot.json` - provisional weather-proxy diagnostics
+- `data/derived/evidence_guardrails.json` - scientific mechanisms and transfer limits
+- `PREREGISTRATION.md` - frozen signal, response, trade and holdout rules
+- `LICENSED_DATA.md` - local-only ICE input boundary
+- `tests/` - offline tests for hashes, units, timing, formulas and deterministic rendering
 
 ## Reproduce
 
-Requires Python 3.11 or later.
+Requires Python 3.11 or later. Acquisition is separate from deterministic analysis; tests block
+network access.
 
 ```bash
 python -m venv .venv
 python -m pip install -e ".[dev,report]"
-python scripts/reproduce.py
+python scripts/reproduce.py --check
 pytest
 ruff check .
 ruff format --check .
 mypy
 ```
 
-Acquisition is kept separate from deterministic analysis. Tests do not access the network.
-
-## Official sources
-
-- [CFTC Disaggregated Futures-Only data](https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy)
-- [CFTC COT methodology](https://publicreporting.cftc.gov/stories/s/COT-Help/p2fg-u73y/)
-- [CFTC historical special announcements](https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm)
-- [World Bank Commodity Price Data](https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet)
-
-See [METHODOLOGY.md](METHODOLOGY.md), [DATA_LICENSE.md](DATA_LICENSE.md) and
+See [METHODOLOGY.md](METHODOLOGY.md), [DATA_LICENSE.md](DATA_LICENSE.md),
+[LICENSED_DATA.md](LICENSED_DATA.md), [PREREGISTRATION.md](PREREGISTRATION.md), and
 [AI_USAGE.md](AI_USAGE.md) for the full boundaries.
 
-This repository contains historical research only. It is not investment advice, a return
-backtest, an executable signal, or an automated trading system.
+NASA POWER acknowledgement: these weather proxies use NASA Langley Research Center POWER Project
+data, POWER Web Services (API v2.9.6/v2.9.7), accessed 20 August 2026. Full request URLs, product
+sources, access timestamps and hashes are retained in the weather registry.
+
+This repository contains historical and hypothetical research only. It is not investment advice,
+an executable signal, a live track record or an automated trading system. It has no broker
+connection and performs no trading action.
 
 ## Related infrastructure
 
 The companion [Point-in-Time Market Data Ledger](https://github.com/ebrahimcahlon212-sketch/market-intelligence-research-platform)
-shows the generic audit and storage controls behind this study.
+shows the generic audit and storage controls behind this applied case.

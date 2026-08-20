@@ -1,0 +1,501 @@
+{
+  "cutoff": {
+    "forward_holdout_begins_utc": "2026-08-21T00:00:00Z",
+    "local": "2026-08-20T13:57:28+01:00",
+    "positioning_utc": "2026-08-14T19:31:00Z",
+    "utc": "2026-08-20T12:57:28Z"
+  },
+  "evidence_gate": {
+    "interpretation": "The registered version-1 physical gate is true at this design snapshot. Weather is context-only and cannot activate the gate; a separately frozen rule and an independent dataset would be required.",
+    "physical_deterioration": true,
+    "reasons": [
+      "official_surplus_revision_down_at_least_25kt",
+      "official_ending_stocks_revision_down_at_least_25kt",
+      "official_stocks_to_grindings_revision_down_at_least_0_5pp"
+    ],
+    "registered_evidence_deterioration": true,
+    "rule_id": "physical_deterioration_v1",
+    "thresholds": {
+      "physical_ending_stocks_decline_kt": 25.0,
+      "physical_max_age_days": 120,
+      "physical_stocks_to_grind_decline_pp": 0.5,
+      "physical_surplus_decline_kt": 25.0
+    },
+    "warnings": [
+      "Thresholds were selected during the retrospective design period and are not evidence of alpha.",
+      "Weather is context-only and ineligible for the version-1 trade gate; a separately frozen rule and independent dataset are required."
+    ],
+    "weather_context_status": "CONTEXT_ONLY_NOT_REGISTERED_V1",
+    "weather_trade_signal_eligible": false
+  },
+  "physical": {
+    "demand_breadth": {
+      "negative_regions": 1,
+      "positive_regions": 2,
+      "region_count": 3,
+      "warning": "Do not sum association series or infer global demand: coverage and reporting-company composition differ, and CAA/NCA disclose comparability changes."
+    },
+    "grindings": [
+      {
+        "association": "Cocoa Association of Asia",
+        "comparability_flag": "membership_basis_changed_during_2025",
+        "grind_tonnes": 224646,
+        "period": "2026-Q2",
+        "prior_year_tonnes": 179618,
+        "region": "Asia",
+        "source_sha256": "6dba725646e21b22fd8975ae1799e3c6a2933da3eb6eb2561ca1fd9fc0d5cda2",
+        "source_url": "https://www.cocoaasia.org/_files/ugd/fba979_7e8a5c99b5474b05b1b03cbd363163c8.pdf",
+        "yoy_pct_calculated": 25.0688,
+        "yoy_pct_reported": 25.07
+      },
+      {
+        "association": "European Cocoa Association",
+        "comparability_flag": "current_release_reports_19_participants",
+        "grind_tonnes": 316366,
+        "period": "2026-Q2",
+        "prior_year_tonnes": 331762,
+        "region": "Europe",
+        "source_sha256": "e1ec1e8ab37c9bd1f28c13bb69a7082449f791317315aa797a5538a8de038266",
+        "source_url": "https://www.eurococoa.com/wp-content/uploads/WEBSITE-REPORT-WESTERN-STATS-Q2-2026.pdf",
+        "yoy_pct_calculated": -4.6407,
+        "yoy_pct_reported": -4.6
+      },
+      {
+        "association": "National Confectioners Association",
+        "comparability_flag": "new_reporting_companies_added_q3_2025",
+        "grind_tonnes": 109659,
+        "period": "2026-Q2",
+        "prior_year_tonnes": 101865,
+        "region": "North America",
+        "source_sha256": "d4782a91612da4edb3506a00cb8a05340515843210f371540a46ab7785f16dcd",
+        "source_url": "https://candyusa.com/wordpress/wp-content/uploads/2026/07/Q2-2026-Cocoa-Grinds.pdf",
+        "yoy_pct_calculated": 7.6513,
+        "yoy_pct_reported": 7.65
+      }
+    ],
+    "interpretation_guardrail": "ICCO gross production minus grindings does not equal the published balance because the balance uses net crop after loss in weight; use ICCO's published surplus/deficit.",
+    "latest_balance": {
+      "crop_year": "2024/25",
+      "ending_stocks_kt": 1320.0,
+      "grindings_kt": 4628.0,
+      "production_kt": 4723.0,
+      "published_at": "2026-05-29T23:59:59Z",
+      "source_sha256": "c36dd40c58cf6da042eedf1ab4f6a5837c87a95f2169310c2dc229b7c4488233",
+      "source_url": "https://www.icco.org/may-2026-quarterly-bulletin-of-cocoa-statistics/",
+      "stocks_to_grind_pct": 28.5,
+      "surplus_kt": 48.0
+    },
+    "official_events": [
+      {
+        "availability_basis": "source_date_conservative_end_of_utc_day",
+        "available_at_utc": "2025-11-28T23:59:59Z",
+        "category": "balance_release",
+        "direction_tag": "looser_year_on_year_balance",
+        "effective_at_utc": "2025-09-30T23:59:59Z",
+        "event_id": "icco_2025_11_balance_turn",
+        "notes": "Direction tag is descriptive and is not a return forecast",
+        "quantitative_fact": "2024/25 surplus 49 kt versus revised 2023/24 deficit 489 kt",
+        "retrieved_at_utc": "2026-08-20T12:56:54Z",
+        "source_sha256": "532f3e7e99215fb9e2dfa47f1665587f516384d449547fc104e427552aca4df5",
+        "source_url": "https://www.icco.org/november-2025-quarterly-bulletin-of-cocoa-statistics/",
+        "title": "ICCO published a 2024/25 surplus after the 2023/24 deficit"
+      },
+      {
+        "availability_basis": "webpage_post_date_conservative_end_of_utc_day",
+        "available_at_utc": "2026-03-02T23:59:59Z",
+        "category": "balance_revision",
+        "direction_tag": "looser_revision",
+        "effective_at_utc": "2025-09-30T23:59:59Z",
+        "event_id": "icco_2026_02_revision",
+        "notes": "Release text is dated 27 February but official webpage availability is conservatively set from 2 March",
+        "quantitative_fact": "2024/25 surplus revised from 49 kt to 75 kt",
+        "retrieved_at_utc": "2026-08-20T12:56:55Z",
+        "source_sha256": "2ccd853f6fd6b310d24fc4fc44b1ddb063f54c49412ded183b2fd2998500cf09",
+        "source_url": "https://www.icco.org/february-2026-quarterly-bulletin-of-cocoa-statistics/",
+        "title": "ICCO raised its 2024/25 surplus estimate"
+      },
+      {
+        "availability_basis": "source_date_conservative_end_of_utc_day",
+        "available_at_utc": "2026-05-29T23:59:59Z",
+        "category": "balance_revision",
+        "direction_tag": "less_loose_revision",
+        "effective_at_utc": "2025-09-30T23:59:59Z",
+        "event_id": "icco_2026_05_revision",
+        "notes": "Direction tag is descriptive and is not a return forecast",
+        "quantitative_fact": "Surplus fell from 75 kt to 48 kt as grindings rose 22 kt and production fell 5 kt",
+        "retrieved_at_utc": "2026-08-20T12:56:55Z",
+        "source_sha256": "c36dd40c58cf6da042eedf1ab4f6a5837c87a95f2169310c2dc229b7c4488233",
+        "source_url": "https://www.icco.org/may-2026-quarterly-bulletin-of-cocoa-statistics/",
+        "title": "ICCO reduced its 2024/25 surplus estimate"
+      },
+      {
+        "availability_basis": "official_page_says_after_1600_singapore_time",
+        "available_at_utc": "2026-07-16T08:00:00Z",
+        "category": "grind_release",
+        "direction_tag": "demand_stronger_yoy_comparability_caveat",
+        "effective_at_utc": "2026-06-30T23:59:59Z",
+        "event_id": "caa_2026_q2_release",
+        "notes": "Reporting membership changed in 2025 and the comparison must stay on the current release basis",
+        "quantitative_fact": "224646 tonnes and 25.07 percent above Q2 2025",
+        "retrieved_at_utc": "2026-08-20T12:56:56Z",
+        "source_sha256": "6dba725646e21b22fd8975ae1799e3c6a2933da3eb6eb2561ca1fd9fc0d5cda2",
+        "source_url": "https://www.cocoaasia.org/_files/ugd/fba979_7e8a5c99b5474b05b1b03cbd363163c8.pdf",
+        "title": "Asian Q2 cocoa grind rose on the current reporting basis"
+      },
+      {
+        "availability_basis": "source_date_conservative_end_of_utc_day",
+        "available_at_utc": "2026-07-16T23:59:59Z",
+        "category": "grind_release",
+        "direction_tag": "demand_weaker_yoy",
+        "effective_at_utc": "2026-06-30T23:59:59Z",
+        "event_id": "eca_2026_q2_release",
+        "notes": "Association coverage is regional and cannot be summed into global demand without adjustment",
+        "quantitative_fact": "316366 tonnes and 4.6 percent below Q2 2025",
+        "retrieved_at_utc": "2026-08-20T12:56:56Z",
+        "source_sha256": "e1ec1e8ab37c9bd1f28c13bb69a7082449f791317315aa797a5538a8de038266",
+        "source_url": "https://www.eurococoa.com/wp-content/uploads/WEBSITE-REPORT-WESTERN-STATS-Q2-2026.pdf",
+        "title": "European Q2 cocoa grind fell year on year"
+      },
+      {
+        "availability_basis": "source_date_conservative_end_of_utc_day",
+        "available_at_utc": "2026-07-16T23:59:59Z",
+        "category": "grind_release",
+        "direction_tag": "demand_stronger_yoy_comparability_caveat",
+        "effective_at_utc": "2026-06-30T23:59:59Z",
+        "event_id": "nca_2026_q2_release",
+        "notes": "NCA added reporting companies and plants in Q3 2025 and warns prior-year data are not available for them",
+        "quantitative_fact": "109659 tonnes and 7.65 percent above Q2 2025",
+        "retrieved_at_utc": "2026-08-20T12:57:15Z",
+        "source_sha256": "d4782a91612da4edb3506a00cb8a05340515843210f371540a46ab7785f16dcd",
+        "source_url": "https://candyusa.com/wordpress/wp-content/uploads/2026/07/Q2-2026-Cocoa-Grinds.pdf",
+        "title": "North American Q2 cocoa grind rose year on year"
+      }
+    ],
+    "vintage_changes": [
+      {
+        "crop_year": "2024/25",
+        "ending_stocks_revision_kt": -27.0,
+        "grindings_revision_kt": 22.0,
+        "latest_available_at_utc": "2026-05-29T23:59:59Z",
+        "latest_release_id": "icco_qbcs_2026_05",
+        "previous_available_at_utc": "2026-03-02T23:59:59Z",
+        "previous_release_id": "icco_qbcs_2026_02",
+        "production_revision_kt": -5.0,
+        "stocks_to_grindings_revision_percentage_points": -0.7,
+        "surplus_deficit_revision_kt": -27.0
+      }
+    ]
+  },
+  "positioning": {
+    "availability_warning": "2009-2024 and uncovered 2025 ordinary dates use the CFTC Friday 15:30 ET rule model; retained official schedules override covered 2025-2026 exceptions.",
+    "eligible_evaluation_count": 729,
+    "exact_schedule_release_count": 47,
+    "latest_net": -6667,
+    "latest_normalized_net_pct": -3.4925690577345185,
+    "latest_open_interest": 190891,
+    "latest_prior_q10_pct": -8.888968355623753,
+    "peak_to_trough": -105656,
+    "release_count": 885,
+    "rule_modelled_release_count": 838,
+    "signal_count": 13,
+    "signal_report_dates": [
+      "2017-02-21",
+      "2017-05-30",
+      "2017-08-29",
+      "2018-01-02",
+      "2018-10-16",
+      "2019-04-02",
+      "2019-09-10",
+      "2020-07-21",
+      "2021-12-14",
+      "2022-07-12",
+      "2022-10-11",
+      "2025-12-09",
+      "2026-06-16"
+    ],
+    "warnings": [
+      "RETROSPECTIVE / PSEUDO-OUT-OF-SAMPLE: thresholds expand through historical releases.",
+      "No result before 2026-08-21 is evidence from the registered forward holdout.",
+      "CFTC availability timing is controlled, but annual archives are not full value-vintage histories.",
+      "A positioning event is a research condition, not a trading instruction or an alpha claim."
+    ]
+  },
+  "schema_version": 1,
+  "science": {
+    "claims": [
+      {
+        "doi": "10.1016/j.agrformet.2022.109199",
+        "label": "Asitoakor et al. 2022",
+        "limitation": "Only three communities and 23 farms; climate and management vary together; association is not a causal tonne response",
+        "mechanism": "Supports dual rainfall mechanism: moisture can aid health while wetter conditions raise black-pod pressure; management is a confounder",
+        "source_url": "https://cocoasoils.org/wp-content/uploads/2022/10/Asitoakor-et-al.-2022..pdf",
+        "study_type": "Four-year observational farm gradient"
+      },
+      {
+        "doi": "10.1017/S001447972510015X",
+        "label": "Montero-Sanchez et al. 2025",
+        "limitation": "Gridded monthly weather and observational associations; farm management disease and tree competition remain relevant; pod counts are not traded tonnes",
+        "mechanism": "Supports crop-stage lags and non-monotonic rainfall interpretation; does not establish a market signal",
+        "source_url": "https://www.cambridge.org/core/journals/experimental-agriculture/article/effects-of-climate-and-withintree-competition-on-cocoa-pod-production-in-ghana/2F9415457E7C6E28FC01F050F4A7049D",
+        "study_type": "Three-year repeated-observation farm panel"
+      },
+      {
+        "doi": "10.1371/journal.pone.0200454",
+        "label": "Gateau-Rey et al. 2018",
+        "limitation": "Single Brazilian municipality near cocoa climatic limits; no untreated contemporaneous control; do not transfer the magnitude to West Africa",
+        "mechanism": "Supports severe-drought tail-risk mechanism but not a West Africa effect size",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0200454",
+        "study_type": "Before-and-after natural drought study"
+      }
+    ],
+    "record_count": 4,
+    "selection_rationale": "The memo shows three near-term mechanism studies. The fourth registry record is a long-horizon suitability projection and remains context-only rather than being presented as evidence for a Dec-26 trade.",
+    "translation_guardrails": [
+      "Treat rainfall as non-monotonic: drought can damage cocoa, while excess rain and humidity can raise fungal-disease pressure.",
+      "Apply crop-stage and lag logic; Ghana pod observations found strongest climate associations at fruit set with one-to-five-month lags by pod class.",
+      "Do not transfer the magnitude of an extreme Bahia drought loss directly to Ghana or Cote d'Ivoire.",
+      "Do not convert a grid-cell weather anomaly to production tonnes without crop-area weights, phenology, farm management, disease, and validated yield response.",
+      "Observational and model-projection studies provide mechanism priors, not proof that a weather reading caused a market move or predicts returns."
+    ]
+  },
+  "signal": {
+    "public_proxy": {
+      "censored_event_count": 1,
+      "ci_high_pct": 5.835616009415759,
+      "ci_low_pct": -5.638245612396339,
+      "complete_event_count": 12,
+      "event_count": 13,
+      "hit_rate_pct": 58.333333333333336,
+      "horizon": "World Bank monthly proxy: m+1 to m+4",
+      "mean_return_pct": 0.6135905473513348,
+      "median_return_pct": 1.8109394734285438,
+      "rule_id": "cftc_normalized_net_q10_reversal_v1",
+      "status": "INCONCLUSIVE / UNDERPOWERED",
+      "warnings": [
+        "PUBLIC PROXY \u2014 NOT TRADABLE: World Bank monthly cocoa prices are not ICE execution prices.",
+        "The primary response is the monthly proxy change from m+1 to m+4; it is not trade P&L.",
+        "RETROSPECTIVE / PSEUDO-OUT-OF-SAMPLE: expanding thresholds do not create a live track record.",
+        "Post-2026-08-20 observations are reserved for the registered forward holdout.",
+        "The block-bootstrap interval describes this event sample and does not prove predictability.",
+        "Fewer than 20 complete events: inference is especially underpowered.",
+        "Incomplete or missing m+4 outcomes are counted as censored, never silently dropped.",
+        "The August-2026 workbook is a current value snapshot, not a replay of historical monthly price vintages."
+      ]
+    }
+  },
+  "sources": [
+    {
+      "public_sha256": "5e40f60993120d26c116ab347beaf93702f5da60c7bdccbbee43cb3d0a91d01a",
+      "source_id": "cftc_disagg_futures_only_2024",
+      "source_url": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2024.zip"
+    },
+    {
+      "public_sha256": "17ac2fef1b53303d01e486bbf5768a4e062308a3c34a2970871f3eab89829cbc",
+      "source_id": "cftc_disagg_futures_only_2025",
+      "source_url": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2025.zip"
+    },
+    {
+      "public_sha256": "38e104b6ba1a1d1d017e37fb7a93e7604e0a72d30f913ee9c3a8d3e4d6026c5e",
+      "source_id": "cftc_disagg_futures_only_2026",
+      "source_url": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2026.zip"
+    },
+    {
+      "public_sha256": "707457559cd65ee9580222569bd8b290cdac95a4968ab025d4eb750f265a50a2",
+      "source_id": "cftc_cot_methodology_page_2026_08",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"
+    },
+    {
+      "public_sha256": "bb47adbaa7ddf50e8a12898b2adfe2b748bec41fc4024a96d536fb43a75e6bbb",
+      "source_id": "cftc_cot_release_schedule_2026_08",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm"
+    },
+    {
+      "public_sha256": "290961ab70b988c11d6d85cb006272d2e5b8afa6e5d9e62dcca6915322c85361",
+      "source_id": "cftc_cot_special_announcements_2026_08",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm"
+    },
+    {
+      "public_sha256": "1ebd84e402776be302cd86fefb467e3baf4bcb07fd3c4a2f9c0d0d17f0508363",
+      "source_id": "world_bank_pink_sheet_monthly_august_2026",
+      "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+    },
+    {
+      "public_sha256": "f8ae8f62c7e6a8311c0f2031cf00727377bd9282e958487a2ed92722533802b8",
+      "source_id": "cftc_cocoa_selected_history_2009_2026",
+      "source_url": "https://publicreporting.cftc.gov/resource/72hh-3qpy.json?%24select=report_date_as_yyyy_mm_dd%2Ccftc_contract_market_code%2Cmarket_and_exchange_names%2Copen_interest_all%2Cm_money_positions_long_all%2Cm_money_positions_short_all%2Cm_money_positions_spread%2Ccontract_units%2Cfutonly_or_combined&%24where=cftc_contract_market_code%3D%27073732%27+AND+report_date_as_yyyy_mm_dd%3E%3D%272009-09-01T00%3A00%3A00.000%27+AND+report_date_as_yyyy_mm_dd%3C%3D%272026-08-11T00%3A00%3A00.000%27&%24order=report_date_as_yyyy_mm_dd&%24limit=5000"
+    },
+    {
+      "public_sha256": "0e861ae35ae7f302b37774a22b276fb6f4f087ddfd5b71e1761663d5a9756f6e",
+      "source_id": "world_bank_cocoa_event_endpoints_2026_08",
+      "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+    }
+  ],
+  "study": "Cocoa trading research case",
+  "trade": {
+    "contract_month": "Dec-26",
+    "entry_rule": "Next eligible session after positioning reversal, registered physical deterioration and a prior-20-session settlement breakout; licensed inputs required.",
+    "evaluation_status": "NOT_EVALUATED_LICENSED_MARKET_INPUTS",
+    "exit_rule": "Earliest of 40 sessions, normalized net >= 0, normalized net below entry, or 10 sessions before option last trading day.",
+    "illustrative_assumptions": {
+      "contract_size_metric_tonnes": 10.0,
+      "futures_reference_usd_per_tonne": 5500.0,
+      "long_strike_usd_per_tonne": 5500.0,
+      "net_debit_usd_per_tonne": 300.0,
+      "paper_nav_usd": 1000000,
+      "round_trip_fees_usd_per_spread": 20.0,
+      "short_strike_usd_per_tonne": 6350.0
+    },
+    "illustrative_breakeven_usd_per_tonne": 5802.0,
+    "illustrative_input_classification": "ILLUSTRATIVE_NOT_MARKET_DATA",
+    "illustrative_max_gain_usd": 5480.0,
+    "illustrative_max_loss_usd": 3020.0,
+    "instrument": "ICE Futures U.S. cocoa call spread",
+    "max_portfolio_risk_pct": 0.5,
+    "payoff_curve": [
+      {
+        "expiry_futures_price_usd_per_tonne": 3500.0,
+        "net_pnl_usd": -3020.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 4500.0,
+        "net_pnl_usd": -3020.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 5300.0,
+        "net_pnl_usd": -3020.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 5500.0,
+        "net_pnl_usd": -3020.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 5800.0,
+        "net_pnl_usd": -20.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 6300.0,
+        "net_pnl_usd": 4980.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 6350.0,
+        "net_pnl_usd": 5480.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 7200.0,
+        "net_pnl_usd": 5480.0
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 8500.0,
+        "net_pnl_usd": 5480.0
+      }
+    ],
+    "scenario_rows": [
+      {
+        "expiry_futures_price_usd_per_tonne": 4500,
+        "net_pnl_usd": -3020.0,
+        "scenario": "Downside / thesis fails",
+        "thesis_state": "maximum defined loss"
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 5802,
+        "net_pnl_usd": 0.0,
+        "scenario": "Near breakeven",
+        "thesis_state": "fees recovered"
+      },
+      {
+        "expiry_futures_price_usd_per_tonne": 7200,
+        "net_pnl_usd": 5480.0,
+        "scenario": "Upside shock",
+        "thesis_state": "maximum capped gain"
+      }
+    ],
+    "scenario_workbook": "outputs/cocoa-trading-v2/cocoa-trade-scenario.xlsx",
+    "structure": "Long first listed call at/above the licensed settlement; short first listed call at/above 115% of the long strike; conservative ask-minus-bid debit.",
+    "warnings": [
+      "Illustrative strikes, debit and NAV are not observed market data.",
+      "Licensed Dec-26 settlement history and option-chain quotes are both absent.",
+      "No broker connection, order routing, recommendation or executable P&L.",
+      "Early-exit value needs licensed option quotes and is not fabricated."
+    ]
+  },
+  "weather": {
+    "as_of": "2026-08-20T12:56:59Z",
+    "data_status": "provisional_location_proxy",
+    "dry_spell_days_display": "5-6",
+    "limitations": [
+      "Two NASA POWER grid cells are location proxies, not cocoa-area-weighted farm observations.",
+      "NASA POWER meteorology is model/assimilation output at roughly 0.5 x 0.625 degree native resolution.",
+      "Near-real-time values can be replaced by improved climate-quality data after two to three months.",
+      "The retained snapshot was first observed at retrieval time; it is not a historical release-vintage archive.",
+      "Kumasi's June extreme model-grid accumulation requires confirmation against a second dataset before weather-signal use.",
+      "No weather anomaly is converted mechanically into cocoa tonnes, price direction, or a trading signal."
+    ],
+    "location_proxies": [
+      {
+        "available_at_utc": "2026-08-20T12:56:58Z",
+        "climatology_precip_mm": 404.11,
+        "country": "Cote d'Ivoire",
+        "days_observed": 75,
+        "dry_days_lt_1mm": 5,
+        "heavy_rain_days_ge_20mm": 6,
+        "max_within_month_dry_spell_days": 1,
+        "mean_t2m_c": 24.99,
+        "observed_precip_mm": 593.99,
+        "precip_anomaly_pct": 46.99,
+        "precipitation_state": "wetter_than_2001_2020_monthly_baseline",
+        "quality_flag": "provisional_nrt_mixed_sources",
+        "quality_flags": [
+          "provisional_nrt_mixed_sources"
+        ],
+        "quality_notes": [
+          "Daily values aggregated deterministically; current snapshot is not a release-vintage archive",
+          "Partial month through 14 August; daily values aggregated deterministically"
+        ],
+        "requires_secondary_confirmation": false,
+        "site_id": "daloa_ci_proxy",
+        "site_name": "Daloa cocoa-belt proxy",
+        "source_sha256": "9028c307ebccaaa64db3150ba3f6eddadeafd956b7a71602487a6f1e023c410c",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR,T2M,T2M_MAX,RH2M&community=AG&longitude=-6.45&latitude=6.877&start=20260101&end=20260814&format=JSON",
+        "t2m_anomaly_c": 0.08,
+        "window_end": "2026-08-14",
+        "window_start": "2026-06-01"
+      },
+      {
+        "available_at_utc": "2026-08-20T12:56:59Z",
+        "climatology_precip_mm": 399.16,
+        "country": "Ghana",
+        "days_observed": 75,
+        "dry_days_lt_1mm": 6,
+        "heavy_rain_days_ge_20mm": 11,
+        "max_within_month_dry_spell_days": 1,
+        "mean_t2m_c": 24.74,
+        "observed_precip_mm": 1149.52,
+        "precip_anomaly_pct": 187.98,
+        "precipitation_state": "much_wetter_than_2001_2020_monthly_baseline",
+        "quality_flag": "provisional_nrt_mixed_sources",
+        "quality_flags": [
+          "provisional_nrt_mixed_sources"
+        ],
+        "quality_notes": [
+          "Daily values aggregated deterministically; current snapshot is not a release-vintage archive",
+          "Large provisional accumulation includes multiple extreme model-grid values and must be confirmed against a second dataset before use",
+          "Partial month through 14 August; daily values aggregated deterministically"
+        ],
+        "requires_secondary_confirmation": true,
+        "site_id": "kumasi_gh_proxy",
+        "site_name": "Kumasi cocoa-belt proxy",
+        "source_sha256": "18158ca0aa4a085f02b99189578934ea64d941ae4130f83c7891f745278e9062",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR,T2M,T2M_MAX,RH2M&community=AG&longitude=-1.624&latitude=6.688&start=20260101&end=20260814&format=JSON",
+        "t2m_anomaly_c": 0.22,
+        "window_end": "2026-08-14",
+        "window_start": "2026-06-01"
+      }
+    ],
+    "quality_gate": "SECOND_SOURCE_REQUIRED",
+    "quality_warning": "Kumasi's June extreme model-grid accumulation must be confirmed against a second dataset; weather is not admitted into the trade gate.",
+    "rainfall_anomaly_display": "+47.0% to +188.0%",
+    "risk_label": "PROVISIONAL / SECOND-SOURCE CHECK REQUIRED",
+    "scope": "Daloa and Kumasi location proxies; not crop-area weighted",
+    "trade_signal_eligible": false
+  }
+}

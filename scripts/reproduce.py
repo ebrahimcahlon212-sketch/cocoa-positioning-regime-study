@@ -1,4 +1,4 @@
-"""Rebuild the derived analytical outputs, charts and one-page note offline."""
+"""Rebuild every derived table, chart and research note offline."""
 
 from __future__ import annotations
 
@@ -6,8 +6,13 @@ import argparse
 from pathlib import Path
 
 from render_note import main as render_note
+from render_trading_case import main as render_trading_case
 
+from cocoa_positioning_study.evidence import materialize_evidence
+from cocoa_positioning_study.fundamentals import materialize_fundamentals
 from cocoa_positioning_study.pipeline import materialize
+from cocoa_positioning_study.trading_case_pipeline import materialize_trading_case
+from cocoa_positioning_study.weather import materialize_weather
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,8 +26,14 @@ def main() -> int:
     )
     args = parser.parse_args()
     materialize(ROOT, check=args.check)
+    materialize_fundamentals(ROOT, check=args.check)
+    materialize_weather(ROOT, check=args.check)
+    materialize_evidence(ROOT, check=args.check)
+    materialize_trading_case(ROOT, check=args.check)
     print("derived outputs are current" if args.check else "derived outputs rebuilt")
-    return render_note()
+    if render_note() != 0:
+        return 1
+    return render_trading_case()
 
 
 if __name__ == "__main__":
