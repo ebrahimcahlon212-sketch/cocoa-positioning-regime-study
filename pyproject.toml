@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cocoa-positioning-regime-study"
+version = "0.1.0"
+description = "Auditable point-in-time cocoa positioning and price regime study"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.11,<2",
+  "pytest>=8.3,<9",
+  "ruff>=0.6,<1",
+  "types-reportlab>=4.2,<5",
+]
+report = [
+  "matplotlib>=3.9,<4",
+  "pypdf>=6,<7",
+  "reportlab>=4.2,<5",
+]
+
+[project.scripts]
+cocoa-regime-study = "cocoa_positioning_study.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cocoa_positioning_study = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "RUF", "S"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+files = ["src", "scripts", "tests"]

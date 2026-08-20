@@ -1,0 +1,194 @@
+{
+  "availability_notes": {
+    "cftc": "Tuesday report dates are separated from publication. Exact official dates are used for the 2025 appropriation-lapse catch-up and the covered 2026 schedule; ordinary 2024 weeks and uncovered 2025 weeks are explicitly labelled rule-based estimates because CFTC does not publish a complete historical release-date list. The values come from annual compressed archive snapshots retrieved on 2026-08-20 and tied to their hashes; those archives can contain later corrections or reclassifications. This models release-time eligibility, not a complete value-revision vintage history, which would require retained weekly snapshots.",
+    "world_bank": "The retained four-row factual extract comes from the August 2026 workbook, which states Updated on August 04, 2026. Its exact publication time is not asserted, so availability precision remains date-only. The full upstream workbook is not redistributed; its URL, retrieval timestamp, byte count, and SHA-256 remain in the manifest alongside the public extract fingerprint."
+  },
+  "cftc_contract_market_code": "073732",
+  "coverage": {
+    "cftc_first_report_date": "2024-01-02",
+    "cftc_last_report_date": "2026-08-11",
+    "cftc_observation_count": 137,
+    "world_bank_first_period": "2026-01",
+    "world_bank_last_period": "2026-07",
+    "world_bank_observation_count": 4
+  },
+  "cutoff": {
+    "local": "2026-08-14T15:31:00-04:00",
+    "rule": "include only records with available_at_utc less than or equal to cutoff",
+    "timezone": "America/New_York",
+    "utc": "2026-08-14T19:31:00Z"
+  },
+  "findings": {
+    "changes": {
+      "latest_open_interest_vs_peak_pct": -42.8,
+      "managed_money_peak_to_trough_change_contracts": -105656,
+      "managed_money_peak_to_trough_contract_unit_metric_tonnes_change": -1056560,
+      "managed_money_peak_to_trough_swing_magnitude_contract_unit_metric_tonnes": 1056560,
+      "managed_money_peak_to_trough_swing_magnitude_contracts": 105656,
+      "managed_money_trough_to_latest_change_contracts": 16417,
+      "open_interest_peak_to_trough_pct": -74.0
+    },
+    "latest_cftc": {
+      "availability_basis": "cftc_official_2026_schedule",
+      "available_at_utc": "2026-08-14T19:30:00Z",
+      "managed_money_net_contracts": -6667,
+      "open_interest_contracts": 190891,
+      "release_at_et": "2026-08-14T15:30:00-04:00",
+      "report_date": "2026-08-11"
+    },
+    "managed_money_net_peak": {
+      "availability_basis": "cftc_ordinary_rule_estimate_not_holiday_verified",
+      "available_at_utc": "2024-01-26T20:30:00Z",
+      "managed_money_net_contracts": 82572,
+      "open_interest_contracts": 333669,
+      "release_at_et": "2024-01-26T15:30:00-05:00",
+      "report_date": "2024-01-23"
+    },
+    "managed_money_net_trough": {
+      "availability_basis": "cftc_official_2026_schedule",
+      "available_at_utc": "2026-06-12T19:30:00Z",
+      "managed_money_net_contracts": -23084,
+      "open_interest_contracts": 203246,
+      "release_at_et": "2026-06-12T15:30:00-04:00",
+      "report_date": "2026-06-09"
+    },
+    "open_interest_peak": {
+      "availability_basis": "cftc_ordinary_rule_estimate_not_holiday_verified",
+      "available_at_utc": "2024-01-26T20:30:00Z",
+      "managed_money_net_contracts": 82572,
+      "open_interest_contracts": 333669,
+      "release_at_et": "2024-01-26T15:30:00-05:00",
+      "report_date": "2024-01-23"
+    },
+    "open_interest_trough": {
+      "availability_basis": "cftc_ordinary_rule_estimate_not_holiday_verified",
+      "available_at_utc": "2025-04-25T19:30:00Z",
+      "managed_money_net_contracts": 13933,
+      "open_interest_contracts": 86919,
+      "release_at_et": "2025-04-25T15:30:00-04:00",
+      "report_date": "2025-04-22"
+    },
+    "price": {
+      "average_q1_2026": 3.93,
+      "average_q1_2026_unrounded": 3.9333,
+      "july_2026": 5.61,
+      "july_vs_q1_full_precision_pct": 42.6271,
+      "july_vs_q1_pct": 42.6
+    }
+  },
+  "interpretation_limits": [
+    "Managed Money is a CFTC trader classification, not a synonym for all speculators.",
+    "Open interest and positions are contracts; each cocoa contract is 10 metric tons.",
+    "The World Bank factual extract is a monthly nominal USD/kg benchmark attributed in the source workbook to ICCO.",
+    "This is a descriptive regime audit, not a return backtest, consensus-surprise study, or trade instruction."
+  ],
+  "market": "Cocoa - ICE Futures U.S.",
+  "sources": [
+    {
+      "external_upstream_path": "data/external/cftc-cot-methodology-2026-08.html",
+      "extract_method": "scripts/source_extracts.py::extract_cftc_methodology",
+      "license": "U.S. federal government work; public domain",
+      "original_unit": "release time in America/New_York",
+      "public_byte_count": 317,
+      "public_sha256": "707457559cd65ee9580222569bd8b290cdac95a4968ab025d4eb750f265a50a2",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "cftc_cot_methodology_page_2026_08",
+      "source_role": "publication_methodology",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
+      "upstream_byte_count": 84397,
+      "upstream_redistributed": false,
+      "upstream_sha256": "0fac417b1696a22b60649af6a54d9a2d23020133a5c75de634f8ecf4b1706eea"
+    },
+    {
+      "external_upstream_path": "data/external/cftc-cot-release-schedule-2026-08.html",
+      "extract_method": "scripts/source_extracts.py::extract_cftc_2026_schedule",
+      "license": "U.S. federal government work; public domain",
+      "original_unit": "report dates and release dates",
+      "public_byte_count": 4474,
+      "public_sha256": "bb47adbaa7ddf50e8a12898b2adfe2b748bec41fc4024a96d536fb43a75e6bbb",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "cftc_cot_release_schedule_2026_08",
+      "source_role": "publication_calendar",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+      "upstream_byte_count": 48667,
+      "upstream_redistributed": false,
+      "upstream_sha256": "9bad1242474855b890e35414d15ffdffe3c10e67fd1244b3cdee8cd615544f22"
+    },
+    {
+      "external_upstream_path": "data/external/cftc-cot-special-announcements-2026-08.html",
+      "extract_method": "scripts/source_extracts.py::extract_cftc_exceptions",
+      "license": "U.S. federal government work; public domain",
+      "original_unit": "report dates and release dates",
+      "public_byte_count": 2703,
+      "public_sha256": "290961ab70b988c11d6d85cb006272d2e5b8afa6e5d9e62dcca6915322c85361",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "cftc_cot_special_announcements_2026_08",
+      "source_role": "publication_calendar",
+      "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm",
+      "upstream_byte_count": 125751,
+      "upstream_redistributed": false,
+      "upstream_sha256": "e168a42ae1143c9381ae78452cc872541d97e6f986396d1ed10344ba1abcb77a"
+    },
+    {
+      "external_upstream_path": "",
+      "extract_method": "retained_verbatim",
+      "license": "U.S. federal government work; public domain",
+      "original_unit": "contracts; cocoa contract is 10 metric tons",
+      "public_byte_count": 2381296,
+      "public_sha256": "5e40f60993120d26c116ab347beaf93702f5da60c7bdccbbee43cb3d0a91d01a",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "cftc_disagg_futures_only_2024",
+      "source_role": "observation_archive",
+      "source_url": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2024.zip",
+      "upstream_byte_count": 2381296,
+      "upstream_redistributed": true,
+      "upstream_sha256": "5e40f60993120d26c116ab347beaf93702f5da60c7bdccbbee43cb3d0a91d01a"
+    },
+    {
+      "external_upstream_path": "",
+      "extract_method": "retained_verbatim",
+      "license": "U.S. federal government work; public domain",
+      "original_unit": "contracts; cocoa contract is 10 metric tons",
+      "public_byte_count": 2420076,
+      "public_sha256": "17ac2fef1b53303d01e486bbf5768a4e062308a3c34a2970871f3eab89829cbc",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "cftc_disagg_futures_only_2025",
+      "source_role": "observation_archive",
+      "source_url": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2025.zip",
+      "upstream_byte_count": 2420076,
+      "upstream_redistributed": true,
+      "upstream_sha256": "17ac2fef1b53303d01e486bbf5768a4e062308a3c34a2970871f3eab89829cbc"
+    },
+    {
+      "external_upstream_path": "",
+      "extract_method": "retained_verbatim",
+      "license": "U.S. federal government work; public domain",
+      "original_unit": "contracts; cocoa contract is 10 metric tons",
+      "public_byte_count": 1544417,
+      "public_sha256": "38e104b6ba1a1d1d017e37fb7a93e7604e0a72d30f913ee9c3a8d3e4d6026c5e",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "cftc_disagg_futures_only_2026",
+      "source_role": "observation_archive",
+      "source_url": "https://www.cftc.gov/files/dea/history/fut_disagg_txt_2026.zip",
+      "upstream_byte_count": 1544417,
+      "upstream_redistributed": true,
+      "upstream_sha256": "38e104b6ba1a1d1d017e37fb7a93e7604e0a72d30f913ee9c3a8d3e4d6026c5e"
+    },
+    {
+      "external_upstream_path": "data/external/world-bank-pink-sheet-monthly-2026-08.xlsx",
+      "extract_method": "scripts/source_extracts.py::extract_world_bank_cocoa",
+      "license": "World Bank dataset catalog lists CC BY 4.0; cocoa series is attributed to ICCO; upstream workbook is not relicensed or redistributed",
+      "original_unit": "nominal U.S. dollars per kilogram for cocoa",
+      "public_byte_count": 1254,
+      "public_sha256": "1ebd84e402776be302cd86fefb467e3baf4bcb07fd3c4a2f9c0d0d17f0508363",
+      "retrieved_at_utc": "2026-08-20T11:22:31Z",
+      "source_id": "world_bank_pink_sheet_monthly_august_2026",
+      "source_role": "price_factual_extract",
+      "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+      "upstream_byte_count": 577979,
+      "upstream_redistributed": false,
+      "upstream_sha256": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433"
+    }
+  ],
+  "study": "Cocoa Positioning Regime Study"
+}

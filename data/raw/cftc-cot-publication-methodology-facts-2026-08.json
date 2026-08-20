@@ -1,0 +1,8 @@
+{
+  "extract_scope": "sanitized factual summary; upstream HTML wrapper is not redistributed",
+  "observation_day": "Tuesday",
+  "ordinary_release_day": "Friday",
+  "release_time": "15:30",
+  "release_timezone": "America/New_York",
+  "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"
+}
