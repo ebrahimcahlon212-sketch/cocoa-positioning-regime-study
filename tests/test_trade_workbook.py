@@ -1,4 +1,4 @@
-"""Integrity checks for the recruiter-facing formula workbook."""
+"""Integrity checks for the formula workbook."""
 
 from __future__ import annotations
 
@@ -37,6 +37,8 @@ def test_workbook_keeps_illustrative_and_no_broker_boundaries_visible() -> None:
     assert "blue rule cells are frozen version-1 research parameters" in text
     assert "Registered physical-balance deterioration" in text
     assert "No order routing, no broker connection, no investment recommendation" in text
+    assert "The workbook documents instrument selection" in text
+    assert "The workbook demonstrates instrument selection" not in text
     assert "First listed strike at or above F0" in text
     assert "First listed strike at or above 115% of K1" in text
     assert "Nearest $50 strike" not in text

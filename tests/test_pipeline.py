@@ -174,7 +174,7 @@ def test_world_bank_price_results(study) -> None:  # type: ignore[no-untyped-def
     assert study.prices[-1].source_vintage_available_at_utc is None
 
 
-def test_recruiter_headline_changes_are_materialized(study) -> None:  # type: ignore[no-untyped-def]
+def test_headline_changes_are_materialized(study) -> None:  # type: ignore[no-untyped-def]
     changes = study.summary["findings"]["changes"]
     assert changes == {
         "managed_money_peak_to_trough_change_contracts": -105_656,

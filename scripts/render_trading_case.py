@@ -1,4 +1,4 @@
-"""Render the recruiter-facing cocoa trading research case.
+"""Render the cocoa trading research case.
 
 The report consumes ``data/derived/trading_case_summary.json`` when it is
 available. Optional evidence is never silently imputed: missing licensed or

@@ -1,4 +1,4 @@
-"""Regression tests for the recruiter-facing trading research report."""
+"""Regression tests for the trading research report."""
 
 from __future__ import annotations
 

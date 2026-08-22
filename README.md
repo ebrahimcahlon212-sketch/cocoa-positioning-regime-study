@@ -71,7 +71,7 @@ primary studies. The papers justify candidate features—dry spells, heat, wetne
 and fruit-set lags. They do **not** provide a transferable cocoa-price coefficient. Only a separately
 registered point-in-time test can decide whether a feature has market relevance.
 
-## What this demonstrates
+## Research controls and outputs
 
 - a full commodity-research chain from official source to falsifiable trade expression;
 - release-time controls that prevent a subtle COT look-ahead error;
@@ -84,7 +84,7 @@ registered point-in-time test can decide whether a feature has market relevance.
 
 ## Repository map
 
-- `output/pdf/cocoa-trading-research-case.pdf` - two-page recruiter-facing trading memo
+- `output/pdf/cocoa-trading-research-case.pdf` - two-page trading research memo
 - `outputs/cocoa-trading-v2/cocoa-trade-scenario.xlsx` - formula-driven scenario workbook
 - `data/derived/trading_case_summary.json` - the report's primary narrative summary
 - `data/derived/cocoa_cot_positioning.csv` and `cocoa_price_monthly.csv` - chart-series inputs

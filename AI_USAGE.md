@@ -6,7 +6,7 @@ AI accelerated the research workflow; it did not supply the evidence.
 
 - identifying suitable official sources and likely point-in-time failure modes;
 - scaffolding parsers, validation tests and documentation;
-- proposing alternative chart layouts and concise recruiter-facing language;
+- proposing alternative chart layouts and concise explanatory language;
 - drafting independent source, pipeline, report and adversarial-review workstreams in parallel;
 - suggesting scientific mechanisms and external-validity questions for human verification;
 - adversarial review for causality, unit, licensing and look-ahead claims; and
