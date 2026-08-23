@@ -12,16 +12,16 @@ Managed-money net cocoa positioning fell from +82,572 contracts in January 2024 
 June 2026, then recovered to -6,667 by August 11. July's $5.61/kg World Bank cocoa indicator was
 42.6% above the Q1 2026 average and coincided with part of that recovery.
 
-The combination is consistent with partial short-covering and/or re-risking. It does not prove
-that positioning caused the price rebound, that the market was crowded, or that physical supply
-had normalized. Open interest recovered from its April 2025 low but remained 42.8% below the
+That combination is consistent with partial short-covering and/or re-risking. It does not prove
+positioning caused the rebound, that the market was crowded, or that physical supply had
+normalized. Open interest recovered from its April 2025 low but remained 42.8% below the
 January 2024 peak.
 
 ### Conditional event-risk posture
 
 The setup creates upside event risk if an official crop recovery disappoints while managed money
-remains net short and price confirms. A firmer case would require the rebound to hold, net shorts
-to become less negative and open interest to expand, indicating participation rather than only a
+remains net short and price confirms. A firmer case would need the rebound to hold, net shorts to
+become less negative and open interest to expand, indicating participation rather than only a
 mechanical reduction in exposure.
 
 The downside case is weaker demand or grindings, a larger official surplus, renewed price

@@ -1,9 +1,9 @@
 # Trading-research preregistration
 
 Version 1 was frozen on **2026-08-20** before any observation from the forward
-evaluation period.  Everything dated on or before that day is design or retrospective
-data.  The first genuine forward-holdout observation must be available after
-2026-08-20.  Changing a rule below creates a separately named version; it must not be
+evaluation period. Everything dated on or before that day is design or retrospective
+data. The first genuine forward-holdout observation must be available after
+2026-08-20. Changing a rule below creates a separately named version; it must not be
 silently substituted into version 1.
 
 This is a research protocol, not a trading instruction or performance claim.
@@ -15,10 +15,10 @@ The weekly variable is
 `x_t = CFTC Managed Money net contracts / total open interest contracts`.
 
 Releases are sorted by their timezone-aware **`available_at` eligibility timestamps**,
-not their Tuesday report dates.  These are retained actual publication times for
+not their Tuesday report dates. These are retained actual publication times for
 officially covered exceptions/schedules and explicitly rule-modelled ordinary Friday
-15:30 ET eligibility times for older history.  Every output retains its availability
-basis and source reference.  For the release at time `t`:
+15:30 ET eligibility times for older history. Every output retains its availability
+basis and source reference. For the release at time `t`:
 
 1. Require at least 156 strictly earlier releases.
 2. Calculate `Q10_t` from every strictly earlier `x` using the empirical nearest-rank
@@ -28,33 +28,33 @@ basis and source reference.  For the release at time `t`:
 4. After an emitted event, suppress further events for 91 elapsed days (13 weeks),
    measured between these eligibility timestamps.
 
-There is no persistent “armed” state: the immediately preceding release itself must
-meet the extreme condition.  The threshold is expanding and prior-only.  It is never
+There is no persistent "armed" state: the immediately preceding release itself must
+meet the extreme condition. The threshold is expanding and prior-only. It is never
 re-estimated using the current or a future observation.
 
 ## 2. Public proxy response
 
 The public response study uses the World Bank monthly cocoa series only as a
-**non-tradable proxy**.  For a signal available in calendar month `m`, the one primary
+**non-tradable proxy**. For a signal available in calendar month `m`, the one primary
 response is:
 
 `R_(m+1,m+4) = price_(m+4) / price_(m+1) - 1`.
 
 Using `m+1` as the first endpoint avoids treating a full-month average that overlaps
-the weekly event as an executable entry.  It still does not make the monthly benchmark
-tradable.  If either endpoint is missing, or `m+4` is later than the declared last
-complete month, the event remains in the output as **censored**.  It is never silently
+the weekly event as an executable entry. It still does not make the monthly benchmark
+tradable. If either endpoint is missing, or `m+4` is later than the declared last
+complete month, the event remains in the output as **censored**. It is never silently
 dropped or filled.
 
 Report the event count, complete count, censored count, arithmetic mean, median,
 strictly-positive response rate, and a 95% circular-block bootstrap interval for the
-mean.  The registered bootstrap uses block length 4, 10,000 replications, and seed
-20,260,820.  With fewer than 20 complete events, the result is explicitly described as
-especially underpowered.  No alternative horizon becomes “primary” after seeing the
+mean. The registered bootstrap uses block length 4, 10,000 replications, and seed
+20,260,820. With fewer than 20 complete events, the result is explicitly described as
+especially underpowered. No alternative horizon becomes "primary" after seeing the
 result.
 
 This evaluation is retrospective/pseudo-out-of-sample: historical thresholds obey the
-information order, but the rule was designed after historical data existed.  It is not
+information order, but the rule was designed after historical data existed. It is not
 a live track record, proof of causality, or evidence of alpha.
 
 ## 3. Physical deterioration gate
@@ -82,7 +82,7 @@ turning a provisional two-location diagnostic into an after-the-fact signal.
 ## 4. Hypothetical Dec-26 structure
 
 The instrument research is a defined-risk **Dec-26 cocoa call spread**, evaluated only
-from a permitted licensed futures and options snapshot.  The public repository never
+from a permitted licensed futures and options snapshot. The public repository never
 contains or reconstructs live ICE quotes.
 
 A version-1 forward hypothetical candidate requires all of the following:
@@ -114,16 +114,16 @@ metric tonne, round-trip per-spread fees `C`, 10 tonnes per contract, and `N` co
 `breakeven = K1 + D + C / 10`.
 
 Whole-contract sizing floors `portfolio value * 0.5% / maximum loss per contract`.
-Zero contracts is the correct result when one spread exceeds the risk budget.  The
+Zero contracts is the correct result when one spread exceeds the risk budget. The
 0.5% cap does not represent all liquidity, exercise, assignment, slippage, tax, margin, or
 operational risks. The public workbook's $20 fee assumption and all strikes/premiums are
-illustrative—not observed ICE inputs or an executable cost estimate.
+illustrative, not observed ICE inputs or an executable cost estimate.
 
 The hypothetical exit is the earliest registered condition observed at an eligible
 close: 40 trading sessions have elapsed; normalized managed-money net `x >= 0`; `x`
 falls strictly below its entry value (fresh-short invalidation); or 10 trading sessions
-remain before the option's last trading day.  The licensed contract master must supply
-the last trading day; this repository does not invent it.  This is an audit rule only
+remain before the option's last trading day. The licensed contract master must supply
+the last trading day; this repository does not invent it. This is an audit rule only
 and does not submit or simulate an order.
 
 ## 5. Forward holdout and governance
@@ -136,5 +136,5 @@ and does not submit or simulate an order.
 - Any change to lookback, percentile, cooldown, horizon, the evidence-gate thresholds or
   freshness, weather eligibility, price-confirmation rule, strike-selection rule, debit limit, or
   risk cap is a new version disclosed before evaluation.
-- Results must retain the warnings “PUBLIC PROXY — NOT TRADABLE”, “HYPOTHETICAL”, and
-  “RETROSPECTIVE / PSEUDO-OUT-OF-SAMPLE” wherever applicable.
+- Results must retain the warnings "PUBLIC PROXY - NOT TRADABLE", "HYPOTHETICAL", and
+  "RETROSPECTIVE / PSEUDO-OUT-OF-SAMPLE" wherever applicable.

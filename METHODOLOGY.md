@@ -7,8 +7,8 @@ weather evolve into August 2026, and did a frozen prior-only positioning-reversa
 precede positive public-proxy returns?
 
 The study combines descriptive research with a retrospective event test and a hypothetical,
-defined-risk trade expression. It does not claim causality, forecast skill, executable profit and
-loss or a live track record. The frozen protocol is in `PREREGISTRATION.md`.
+defined-risk trade expression. It does not claim causality, forecast skill, executable P&L or a
+live track record. The frozen protocol is in `PREREGISTRATION.md`.
 
 ## Data scope
 
@@ -25,52 +25,52 @@ loss or a live track record. The frozen protocol is in `PREREGISTRATION.md`.
 The study uses the futures-only report to avoid silently mixing futures and options exposure.
 Spread positions are not added to directional long or short positions. Gross categories and
 trader classifications can change even when market exposure has not changed one-for-one, so
-the analysis is a positioning lens rather than a complete map of beneficial ownership.
+treat this as a positioning lens, not a complete map of beneficial ownership.
 
 The optional contract-unit equivalent multiplies contracts by the exchange contract unit used
-in the pipeline. It is a notional comparison only. It is never described as physical beans,
-deliverable stock, warehouse inventory or supply.
+in the pipeline. It is a notional comparison only, never physical beans, deliverable stock,
+warehouse inventory or supply.
 
 ### Physical balance and regional demand
 
-The physical layer retains official ICCO cocoa-balance vintages and regional grinding releases as
+The physical layer keeps official ICCO cocoa-balance vintages and regional grinding releases as
 separate observations. It records production, grindings, the provider's published surplus/deficit,
 ending stocks and stocks-to-grindings with original units, release time, retrieval time, URL and
-source hash. Revisions append a later vintage; they do not replace the earlier estimate.
+source hash. Revisions append a later vintage; the earlier estimate is kept.
 
 The current headline vintage is not a complete physical-flow model. It lacks licensed daily port
 arrivals, exchange-certified stocks, farm-level conditions and a full prospective archive of every
-historical release. Regional grinding comparators also retain association-specific methodology and
+historical release. Regional grinding comparators also carry association-specific methodology and
 revision caveats.
 
 ### Weather and scientific evidence
 
 The weather layer uses NASA POWER daily location proxies for Daloa, Côte d'Ivoire, and Kumasi,
-Ghana. These are provisional gridded values for two points—not crop-area-weighted production
+Ghana. These are provisional gridded values for two points, not crop-area-weighted production
 exposure or farm microclimate. Rainfall anomalies, dry days and dry-spell measures remain features;
 they are never converted mechanically into cocoa tonnes or price direction. Kumasi's extreme June
 model-grid accumulation requires a second-source check and is ineligible for the trade gate.
 
 The scientific registry records source, design, geography, mechanism and external-validity limits.
 Studies select plausible mechanisms and lags; they do not supply a transferable trading coefficient.
-For example, excess wetness can support plant growth while increasing black-pod pressure. That
+Excess wetness, for example, can support plant growth while increasing black-pod pressure. That
 ambiguity is preserved rather than collapsed into a bullish or bearish rule.
 
 The two-page memo displays three studies with mechanisms closest to a near-term crop discussion.
-The fourth registry record is a long-horizon suitability projection; it remains in the auditable
+The fourth registry record is a long-horizon suitability projection; it stays in the auditable
 registry but is not presented as support for a Dec-26 trade.
 
 ### Public price-response proxy
 
 Twenty-three World Bank monthly cocoa observations provide only the available endpoints required for the
-registered historical response study. A separate four-value extract—January, February, March and
-July 2026—supports the original descriptive note. The upstream workbook expresses the series in
+registered historical response study. A separate four-value extract (January, February, March and
+July 2026) supports the original descriptive note. The upstream workbook expresses the series in
 U.S. dollars per kilogram and attributes it to the International Cocoa Organization. Neither
-extract is the return on a specific futures contract or includes roll, basis, transaction costs,
-margin or execution.
+extract is the return on a specific futures contract, and neither includes roll, basis,
+transaction costs, margin or execution.
 
 The public repository does not redistribute the full workbook or upstream pages. For the historical
-event study, it retains only the 23 attributed monthly endpoints required by the frozen `m+1` to
+event study, it keeps only the 23 attributed monthly endpoints required by the frozen `m+1` to
 `m+4` response calculation, plus official URLs and upstream SHA-256 hashes. The four-row extract
 used by the original note remains separate. Because the August 2026 workbook is a current snapshot,
 not a complete historical publication-vintage archive, the response study is labelled retrospective
@@ -85,9 +85,9 @@ Eastern Time. The data model therefore keeps two distinct concepts:
 - `available_at`: the first modeled time at which the report could be used.
 
 Historical selection is performed on `available_at <= cutoff`, never on the report date alone.
-For example, an observation effective Tuesday, August 11, 2026 is modeled as available only at
-the corresponding Friday publication time. The precise UTC offset is timezone-aware and follows
-New York daylight-saving rules.
+An observation effective Tuesday, August 11, 2026 is modeled as available only at the
+corresponding Friday publication time. The UTC offset is timezone-aware and follows New York
+daylight-saving rules.
 
 "Generally" matters. Holidays, delayed publications, corrections and exceptional CFTC release
 schedules can change the normal Friday timing. Retained official 2025 special-release and 2026
@@ -190,7 +190,7 @@ The separate version-1 evidence gate is exact: an ICCO surplus or ending-stocks 
 least -25kt, or a stocks-to-grindings revision of at least -0.5pp, triggers it. It is recomputed at
 each new visible ICCO vintage and expires after 120 days if not superseded. The current state is
 true, but these thresholds were frozen after the May revision was already known, so this is design
-evidence—not a forward result. Weather is context-only in version 1 and cannot activate the gate.
+evidence, not a forward result. Weather is context-only in version 1 and cannot activate the gate.
 Any future weather rule must name and freeze its independent confirmation source, spatial method,
 thresholds, window, freshness and reset before evaluation. Full rules are in `PREREGISTRATION.md`.
 

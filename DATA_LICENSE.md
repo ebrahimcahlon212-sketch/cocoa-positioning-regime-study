@@ -10,12 +10,12 @@ Disaggregated Futures-Only dataset. U.S. federal government works are generally 
 and the CFTC requests appropriate acknowledgement. The project cites the CFTC as source and
 preserves the exact download URL and SHA-256 hash in `data/source_manifest.csv`.
 
-The public repository retains the annual observation archives needed for the analysis. Full
+The public repository keeps the annual observation archives needed for the analysis. Full
 CFTC methodology, schedule and announcement-page wrappers are not redistributed; compact
 sanitized extracts preserve only the publication facts used by the temporal model, with official
 URLs and upstream hashes in the manifest.
 
-The extended signal study also retains a rights-minimal selected-field CSV from CFTC's public
+The extended signal study also keeps a rights-minimal selected-field CSV from CFTC's public
 Socrata API for the live disaggregated-report era. Its manifest records both the upstream response
 and public-extract hashes. It is a current retrieved-value snapshot and is not described as a full
 archive of every later CFTC correction or reclassification.
@@ -33,10 +33,10 @@ dataset catalog identifies the dataset under Creative Commons Attribution 4.0 (C
 the workbook attributes the cocoa series to the International Cocoa Organization. Both the World
 Bank Prospects Group and ICCO are therefore acknowledged.
 
-For a rights-minimal public artifact, this repository retains two factual extracts: the original
+To keep the public artifact rights-minimal, this repository retains two factual extracts: the original
 four attributed 2026 values and the 23 unique monthly endpoints required by the frozen event
 study. It does not redistribute the full workbook or upstream pages, separately relicense ICCO
-material, imply endorsement, or claim ownership of the source. The manifests retain the official
+material, imply endorsement, or claim ownership of the source. The manifests keep the official
 landing and artifact URLs plus the upstream SHA-256 hash. They also separate upstream and public
 byte counts and hashes, identify the extraction method, and record that the upstream workbook is
 not redistributed.
@@ -92,7 +92,7 @@ or derived exchange data unless the applicable licence expressly permits that us
 Derived tables contain the minimum values needed to reproduce this analysis, with source
 attribution and units. The cocoa extracts and physical/weather registries are project
 transcriptions for this calculation, not official republications. Contract-unit equivalents are
-analytical notionals and are not physical inventory. Illustrative option values are conspicuously
+analytical notionals, not physical inventory. Illustrative option values are conspicuously
 labelled and are not exchange observations.
 
 If provider terms or attribution requirements change, the minimal extract can be removed while

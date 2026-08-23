@@ -8,14 +8,14 @@ evaluated**; any illustrative mechanics remain separately and visibly labelled.
 
 ### Decision view
 
-The research case watches for convex upside event risk if crop recovery disappoints while managed
-money remains short and price confirms. The opposite case is weaker grindings, a larger official
-surplus, renewed price weakness and fresh short formation. This is a conditional framework, not a
+The case to watch is convex upside event risk: crop recovery disappoints while managed money is
+still short and price confirms. The opposite case is weaker grindings, a larger official surplus,
+renewed price weakness and fresh short formation. This is a conditional framework, not a
 directional forecast.
 
 The original positioning study established a material regime change and enforced the distinction
-between a report's effective date and its actual publication time. This extension asks whether that
-observation survives three harder tests:
+between a report's effective date and its actual publication time. This extension asks whether
+that observation survives three harder tests:
 
 1. Does the physical balance deteriorate in the official estimate vintage available at the time?
 2. Do two provisional location-proxy weather features identify a credible crop-stage mechanism?
@@ -25,12 +25,13 @@ observation survives three harder tests:
 
 The physical layer records production, grindings, surplus or deficit, ending stocks and
 stocks-to-grindings for each official vintage. Revisions are appended as new observations; prior
-estimates are not overwritten. Regional grindings releases are treated as separate demand evidence.
+estimates are not overwritten. Regional grindings releases are treated as separate demand
+evidence.
 
-The weather layer currently uses two provisional NASA POWER location proxies for Daloa and Kumasi.
-They are not crop-area-weighted farm measurements or historical release vintages. Weather is not
-translated mechanically into tonnes. Rain can support growth and also increase disease pressure, so
-feature meaning depends on geography, crop stage and lag.
+The weather layer currently uses two provisional NASA POWER location proxies for Daloa and
+Kumasi. They are not crop-area-weighted farm measurements or historical release vintages, and
+weather is not translated mechanically into tonnes. Rain can support growth and also increase
+disease pressure, so feature meaning depends on geography, crop stage and lag.
 
 ### Hypothetical trade rule
 
@@ -41,29 +42,29 @@ The preferred expression is a defined-risk cocoa call spread, activated only aft
 - price confirms rather than continuing lower.
 
 The hypothetical structure buys the first listed call at or above the licensed settlement and
-sells the first listed strike at or above 115% of that long strike. The frozen exit is the earliest
-of 40 sessions, CFTC normalized net at or above zero,
-normalized net below its entry level, or 10 sessions before the option's last trading day.
+sells the first listed strike at or above 115% of that long strike. The frozen exit is the
+earliest of 40 sessions, CFTC normalized net at or above zero, normalized net below its entry
+level, or 10 sessions before the option's last trading day.
 
-Because permitted ICE settlement history and option-chain inputs are absent, the report labels the
-rule **not evaluated**. It separately shows conspicuously illustrative strikes, premium, fees and
-scenario outcomes to make the mechanics auditable; they are not market observations or executable
-P&L. It performs no broker action.
+Because permitted ICE settlement history and option-chain inputs are absent, the report labels
+the rule **not evaluated**. It separately shows conspicuously illustrative strikes, premium, fees
+and scenario outcomes to make the mechanics auditable; they are not market observations or
+executable P&L. It performs no broker action.
 
 ### Historical evaluation
 
 The public study uses release-time eligibility and must keep thresholds inside an expanding or
-walk-forward window. Event counts, median returns, hit rates and confidence intervals are reported
-only when materialized by deterministic Python. World Bank monthly cocoa values are public price
-context, not a tradable ICE futures return or executable P&L. A licensed contract-level study remains
-separate and cannot be inferred from the proxy.
+walk-forward window. Event counts, median returns, hit rates and confidence intervals are
+reported only when materialized by deterministic Python. World Bank monthly cocoa values are
+public price context, not a tradable ICE futures return or executable P&L. A licensed
+contract-level study remains separate and cannot be inferred from the proxy.
 
 ### Scientific evidence register
 
-Scientific papers are used to define mechanisms and lags, not to import an effect size blindly. Each
-claim should record geography, sample, method, crop stage, exposure, lag, uncertainty and external-
-validity limitations. A paper is not presented in the report until those fields have been extracted
-and checked.
+Scientific papers are used to define mechanisms and lags, not to import an effect size blindly.
+Each claim should record geography, sample, method, crop stage, exposure, lag, uncertainty and
+external-validity limitations. A paper is not presented in the report until those fields have
+been extracted and checked.
 
 ### Risk and boundaries
 

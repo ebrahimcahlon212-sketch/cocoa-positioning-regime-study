@@ -2,20 +2,21 @@
 
 **Positioning, the physical balance, regional demand, weather and a defined-risk expression**
 
-This public project asks a trading question without manufacturing a trading result: after cocoa
-positioning moved from an extreme long to net short, did the physical, weather and historical
-return evidence justify a bullish reversal trade?
+The question I set out to answer: after cocoa positioning swung from an extreme long to net
+short, did the physical, weather and historical return evidence justify a bullish reversal
+trade? I tried to answer that without manufacturing a trading result.
 
 - **[Open the two-page trading memo](output/pdf/cocoa-trading-research-case.pdf)**
 - **[Open the scenario workbook](outputs/cocoa-trading-v2/cocoa-trade-scenario.xlsx)**
 - [Original one-page positioning note](output/pdf/cocoa-positioning-regime-shift.pdf)
 
-The answer is deliberately mixed. The physical recovery is real but not comfortable, demand is
-regionally divergent, and managed-money remained net short. Provisional West African location
-proxies lean wet, but Kumasi's extreme accumulation needs a second-source check and is excluded
-from the trade gate. The frozen retrospective public-proxy study is **inconclusive**: 12 completed events
-produced a mean three-month response of **+0.6%**, a **58.3%** positive rate and a wide **-5.6% to
-+5.8%** block-bootstrap interval. That is not evidence of alpha.
+My honest answer is mixed. The physical recovery is real but not comfortable, demand is
+regionally divergent, and managed money was still net short. Provisional West African location
+proxies lean wet, but Kumasi's extreme accumulation needs a second source and is excluded from
+the trade gate. The frozen retrospective public-proxy study comes out **inconclusive**: 12
+completed events, a mean three-month response of **+0.6%**, a **58.3%** positive rate and a wide
+**-5.6% to +5.8%** block-bootstrap interval. That is not evidence of alpha, and the report says
+so.
 
 ## Decision view as of 20 August 2026
 
@@ -27,19 +28,20 @@ produced a mean three-month response of **+0.6%**, a **58.3%** positive rate and
 | Weather | Daloa was +47.0%; the Kumasi-driven upper reading of +188.0% is flagged for second-source confirmation | Provisional location proxies, not crop-area weights or a yield forecast; weather is not currently trade-gate eligible |
 | Historical test | 13 events; 12 complete; mean +0.6%; median +1.8%; hit rate 58.3%; 95% CI -5.6% to +5.8% | Monthly World Bank data are a non-tradable response proxy and the result is underpowered/inconclusive |
 
-The conditional upside case is therefore an **event-risk watch**, not a buy signal. The exact
-version-1 physical gate is currently true because the latest ICCO revision reduced the published
-surplus and ending stocks by 27kt and stocks/grindings by 0.7pp. That state expires after 120 days
-or a newer vintage. Weather is context-only and cannot activate version 1. A new positioning reversal and licensed
-contract-price confirmation are still required. Weaker grindings, a wider official surplus,
-improving crop conditions or renewed short formation invalidate the thesis.
+So the conditional upside case is an **event-risk watch**, not a buy signal. The exact version-1
+physical gate is currently true because the latest ICCO revision reduced the published surplus and
+ending stocks by 27kt and stocks/grindings by 0.7pp. That state expires after 120 days or a newer
+vintage. Weather is context-only and cannot activate version 1. A new positioning reversal and
+licensed contract-price confirmation are still required. Weaker grindings, a wider official
+surplus, improving crop conditions or renewed short formation invalidate the thesis.
 
 ## Hypothetical expression
 
-The frozen research rule uses a defined-risk **Dec-26 cocoa call spread** because a weather or crop
-disappointment is asymmetric while the premium caps loss. Actual evaluation requires licensed ICE
-settlement history and option-chain inputs stored outside Git. Neither is present. The public report
-uses conspicuously illustrative—not market—inputs only to make the mechanics auditable:
+The frozen research rule uses a defined-risk **Dec-26 cocoa call spread**, on the logic that a
+weather or crop disappointment is asymmetric while the premium caps loss. Actual evaluation
+requires licensed ICE settlement history and option-chain inputs stored outside Git. Neither is
+present. The public report uses conspicuously illustrative inputs that are not market
+observations, solely to make the mechanics auditable:
 
 - long 5,500 / short 6,350 call;
 - 300 USD/t net debit plus 20 USD round-trip fees per spread;
@@ -55,21 +57,22 @@ licensed inputs produce **NOT EVALUATED**, never guessed prices.
 
 CFTC positions are effective on Tuesday but normally become usable on Friday at 15:30 Eastern.
 The pipeline sorts and applies its 91-day cooldown using the actual or explicitly modelled
-publication timestamp—not the report date. This matters around daylight-saving changes and during
-exceptional schedules: the 30 September 2025 report was unavailable until the shutdown catch-up on
-19 November.
+publication timestamp rather than the report date. This matters around daylight-saving changes and
+during exceptional schedules: the 30 September 2025 report was unavailable until the shutdown
+catch-up on 19 November.
 
-The event threshold is an expanding, prior-only tenth percentile with at least 156 earlier releases.
-The response uses World Bank month `m+1` to `m+4`; missing future endpoints stay censored. Because
-the rule was designed after historical data existed, every result through 20 August 2026 is labelled
-retrospective/pseudo-out-of-sample. The registered forward holdout starts after that date.
+The event threshold is an expanding, prior-only tenth percentile with at least 156 earlier
+releases. The response uses World Bank month `m+1` to `m+4`; missing future endpoints stay
+censored. Because the rule was designed after historical data existed, every result through
+20 August 2026 is labelled retrospective/pseudo-out-of-sample. The registered forward holdout
+starts after that date.
 
 ## How scientific studies are used
 
 The evidence registry records mechanism, geography, design and external-validity limits for four
-primary studies. The papers justify candidate features—dry spells, heat, wetness/disease pressure
-and fruit-set lags. They do **not** provide a transferable cocoa-price coefficient. Only a separately
-registered point-in-time test can decide whether a feature has market relevance.
+primary studies. The papers justify candidate features including dry spells, heat, wetness/disease
+pressure and fruit-set lags. They do **not** provide a transferable cocoa-price coefficient. Only
+a separately registered point-in-time test can decide whether a feature has market relevance.
 
 ## Research controls and outputs
 
