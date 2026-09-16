@@ -13,3 +13,5 @@ dist/
 tmp/
 data/external/
 data/licensed/
+output/pdf/
+~$*.docx

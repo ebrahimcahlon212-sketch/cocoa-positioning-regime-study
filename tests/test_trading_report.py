@@ -5,7 +5,9 @@ from __future__ import annotations
 import hashlib
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
+from zipfile import ZipFile
 
 from pypdf import PdfReader
 
@@ -143,8 +145,12 @@ def test_trading_case_report_is_byte_deterministic() -> None:
 
 
 def test_report_sources_use_ascii_hyphens() -> None:
-    for path in (SCRIPT, ROOT / "note" / "cocoa-trading-research-case.md"):
-        text = path.read_text(encoding="utf-8")
+    texts = [SCRIPT.read_text(encoding="utf-8")]
+    for path in sorted((ROOT / "reports").glob("*.docx")):
+        with ZipFile(path) as document:
+            root = ET.fromstring(document.read("word/document.xml"))  # noqa: S314 - repository-owned document
+        texts.append(" ".join(root.itertext()))
+    for text in texts:
         assert "\N{NON-BREAKING HYPHEN}" not in text
         assert "\N{EN DASH}" not in text
         assert "\N{EM DASH}" not in text

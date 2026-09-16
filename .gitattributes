@@ -2,4 +2,5 @@
 *.zip binary
 *.xlsx binary
 *.pdf binary
+*.docx binary
 *.png binary
